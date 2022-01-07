@@ -1,0 +1,36 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
+<!DOCTYPE html>  
+<html> 
+<f:view> 
+<h:head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <title>Railway Registration Form</title>
+       <h3><h:outputText value="Railway Reservation Form"/></h3> 
+</h:head> 
+ 
+<h:body> 
+    <h:form id="submitForm" modelAttribute="reservation">  
+         
+        <h:outputLabel for="firstName">First Name</h:outputLabel>  
+		<h:inputText id="firstName" value="#{firstName}"/><br/>        
+        <br><br>  
+        
+        <h:outputLabel for="lastName">Last Name</h:outputLabel>  
+		<h:inputText id="lastName" value="#{lastName}"/><br/>         
+        <br><br>  
+ 
+        <h:outputLabel for="gender" >Gender</h:outputLabel>  
+ 		<h:selectOneRadio value="#{Gender}" >  
+		<f:selectItem itemValue="M" itemLabel="Male" />  
+		<f:selectItem itemValue="F" itemLabel="Female" />  
+		</h:selectOneRadio>  
+		<br><br>  
+		
+		<h:commandButton value="Submit" action="#{save()}"style="width: 80px;"></h:commandButton>  
+  
+</h:form>  
+</h:body>
+</f:view>  
+</html>  
